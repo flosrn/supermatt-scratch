@@ -6,5 +6,5 @@ export function sum(values) {
 
 // True when the literal text occurs in the input; an empty literal always matches.
 export function containsLiteral(text, literal) {
-  return new RegExp(RegExp.escape(literal)).test(text);
+  return text.includes(literal);
 }
