@@ -3,3 +3,12 @@ export function sum(values) {
   for (const v of values) total += v;
   return total;
 }
+
+export function average(values) {
+  return sum(values) / values.length;
+}
+
+// How many times `word` appears in `text`, matched literally.
+export function countWord(text, word) {
+  return (text.match(new RegExp(RegExp.escape(word), "g")) ?? []).length;
+}

@@ -5,3 +5,13 @@ import { sum } from "./stats.mjs";
 test("sum adds every value", () => {
   assert.equal(sum([1, 2, 3]), 6);
 });
+
+test("average divides the sum by the count", async () => {
+  const { average } = await import("./stats.mjs");
+  assert.equal(average([2, 4, 6]), 4);
+});
+
+test("countWord matches the word literally", async () => {
+  const { countWord } = await import("./stats.mjs");
+  assert.equal(countWord("a+b, a+b and ab", "a+b"), 2);
+});
