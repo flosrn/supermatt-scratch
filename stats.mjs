@@ -14,3 +14,8 @@ export function countWord(text, word) {
   const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return (text.match(new RegExp(escaped, "g")) ?? []).length;
 }
+
+// Day of the month of a reading, on the reader's local calendar: the daily report is local.
+export function readingDay(date) {
+  return date.getDate();
+}

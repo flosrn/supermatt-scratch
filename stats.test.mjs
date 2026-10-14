@@ -22,3 +22,8 @@ test("countWord matches the word literally", async () => {
   assert.equal(countWord("[a]. [a]. a", "[a]."), 2);
   assert.equal(countWord("a\\b a\\b", "a\\b"), 2);
 });
+
+test("readingDay uses the local calendar day", async () => {
+  const { readingDay } = await import("./stats.mjs");
+  assert.equal(readingDay(new Date("2026-10-14T20:00:00Z")), 15);
+});
