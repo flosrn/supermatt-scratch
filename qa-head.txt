@@ -1,0 +1,1 @@
+Adjacent head-movement fixture; no runtime behavior.
