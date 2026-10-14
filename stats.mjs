@@ -11,5 +11,6 @@ export function average(values) {
 
 // How many times `word` appears in `text`, matched literally.
 export function countWord(text, word) {
-  return (text.match(new RegExp(RegExp.escape(word), "g")) ?? []).length;
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return (text.match(new RegExp(escaped, "g")) ?? []).length;
 }

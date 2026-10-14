@@ -19,4 +19,6 @@ test("average returns zero for an empty list", async () => {
 test("countWord matches the word literally", async () => {
   const { countWord } = await import("./stats.mjs");
   assert.equal(countWord("a+b, a+b and ab", "a+b"), 2);
+  assert.equal(countWord("[a]. [a]. a", "[a]."), 2);
+  assert.equal(countWord("a\\b a\\b", "a\\b"), 2);
 });
