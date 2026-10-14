@@ -11,6 +11,11 @@ test("average divides the sum by the count", async () => {
   assert.equal(average([2, 4, 6]), 4);
 });
 
+test("average returns zero for an empty list", async () => {
+  const { average } = await import("./stats.mjs");
+  assert.equal(average([]), 0);
+});
+
 test("countWord matches the word literally", async () => {
   const { countWord } = await import("./stats.mjs");
   assert.equal(countWord("a+b, a+b and ab", "a+b"), 2);

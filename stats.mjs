@@ -5,6 +5,7 @@ export function sum(values) {
 }
 
 export function average(values) {
+  if (values.length === 0) return 0;
   return sum(values) / values.length;
 }
 
