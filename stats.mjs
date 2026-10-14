@@ -3,3 +3,8 @@ export function sum(values) {
   for (const v of values) total += v;
   return total;
 }
+
+// True when the literal text occurs in the input.
+export function containsLiteral(text, literal) {
+  return new RegExp(RegExp.escape(literal)).test(text);
+}
