@@ -15,3 +15,7 @@ test("median leaves its input unsorted", () => {
   median(values);
   assert.deepEqual(values, [3, 1, 2]);
 });
+
+test("median rejects an empty list", () => {
+  assert.throws(() => median([]), RangeError);
+});
