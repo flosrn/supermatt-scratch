@@ -5,5 +5,6 @@ export function highlight(text, term) {
 
 // Counts the literal occurrences of `term` in `text`, ignoring case.
 export function countLiteral(text, term) {
-  return text.match(new RegExp(RegExp.escape(term), "gi"))?.length ?? 0;
+  const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return text.match(new RegExp(escapedTerm, "gi"))?.length ?? 0;
 }
