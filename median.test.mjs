@@ -19,3 +19,7 @@ test("median leaves its input unsorted", () => {
 test("median rejects an empty list", () => {
   assert.throws(() => median([]), RangeError);
 });
+
+test("median of two maximum finite values remains finite", () => {
+  assert.equal(median([Number.MAX_VALUE, Number.MAX_VALUE]), Number.MAX_VALUE);
+});
