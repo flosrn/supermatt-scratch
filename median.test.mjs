@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { median } from "./Median.mjs";
+import { median } from "./median.mjs";
 
 test("median of an odd-length list is the middle value", () => {
   assert.equal(median([3, 1, 2]), 2);
